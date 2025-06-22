@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body>
+    <div class="d-md-flex">
+      <div class="landing">
+        <div class="back position-relative">
+          <div class="back-content position-absolute">
+            <span id="cvc-field" class="text-light fs-6">000</span>
+          </div>
+        </div>
+        <div class="front position-relative">
+          <div class="front-content p-3 text-light">
+            <div class="mb-4 d-flex align-items-center">
+              <span
+                class="d-block w-30 h-30 bg-white rounded-circle me-2"
+              ></span>
+              <span class="d-block w-15 h-15 border rounded-circle"></span>
+            </div>
+            <div class="text-center">
+              <p id="number-field" class="fs-5">0000 0000 0000 0000</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span id="name-field">Jane Appleseed</span>
+                <span
+                  ><span id="mm-field">00</span>/<span id="yy-field"
+                    >00</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="mt-5 pt-5 d-md-flex justify-content-center align-items-center"
+      >
+        <form class="w-100">
+          <div class="input-box mb-3">
+            <label for="name">Cardholder Name</label>
+            <input
+              id="name"
+              class="d-block wt-2 w-100"
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="input-box mb-3">
+            <label for="number">Card Number</label>
+            <input
+              id="number"
+              class="d-block wt-2 w-100"
+              type="text"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <span class="error"></span>
+          </div>
+          <div class="d-flex gap-2 align-items-end">
+            <div class="w-50">
+              <label class="w-100 h-25">Exp. Date (MM/YY)</label>
+              <div class="d-flex gap-2">
+                <div class="input-box">
+                  <input
+                  id="mm"
+                  class="w-100"
+                  type="text"
+                  maxlength="2"
+                  placeholder="MM"
+                  />
+                  <span class="error"></span>
+                </div>
+                <div class="input-box">
+                  <input
+                  id="yy"
+                  class="w-100"
+                  type="text"
+                  maxlength="4"
+                  placeholder="YY"
+                  />
+                  <span class="error"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-box w-50">
+              <label>CVC</label>
+              <input
+                id="cvc"
+                class="w-100"
+                type="text"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <span class="error"></span>
+            </div>
+          </div>
+          <button class="main-btn w-100 mt-4">Confirm</button>
+        </form>
+      </section>
+    </div>
+    <script src="JS/main.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

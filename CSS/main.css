@@ -1,0 +1,139 @@
+:root {
+  --White:hsl(0, 100%, 100%);
+  --Gray-200: hsl(270, 3%, 87%);
+  --Gray-400: hsl(212, 12%, 71%);
+  --Purple-950: hsl(278, 68%, 11%);
+  --correct-input: linear-gradient(to left, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  overflow: hidden; 
+}
+/* Start Global Rules */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.w-30 {
+  width: 30px;
+}
+.h-30 {
+  height: 30px;
+}
+.w-15 {
+  width: 15px;
+}
+.h-15 {
+  height: 15px;
+}
+.main-btn {
+  background-color: var(--Purple-950);
+  color: var(--White);
+  padding: 15px 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 18px;
+}
+/* End Global Rules */
+.landing {
+  background-image: url('../images/bg-main-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 270px;
+  @media (min-width: 768px) {
+    height: 100vb;
+    width: 30%;
+  }
+  .back {
+    background-image: url('../images/bg-card-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 85%;
+    height: 15vb;
+    top: 35px;
+    left: 30px;
+    box-shadow: 20px 20px 20px 20px #00000021;
+    border-radius: 7px;
+    @media (min-width: 768px) {
+      top: 650px;
+      left: 50%;
+    }
+  }
+  .back-content {
+    top: 48.5%;
+    right: 20px;
+    transform: translateY(-50%);
+    @media (min-width: 768px) {
+      top: 50%;
+      right: 40px;
+  }
+  }
+  .front {
+    background-image: url(../images/bg-card-front.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 90%;
+    height: 15vb;
+    left: 15px;
+    top: -45px;
+    border-radius: 7px;
+    box-shadow: 20px 20px 20px 20px #00000021;
+    @media (min-width: 768px) {
+      top: 290px;
+      left: 40%;
+    }
+  }
+  .front-content {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+section {
+  margin: 0 auto;
+  width: 95%;
+  @media (min-width: 768px) {
+    width: 45%;
+    margin: 0 100px 0 auto;
+    height: 100vb;
+  }
+  form {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    input {
+      border: 1px solid var(--Gray-200);
+      border-radius: 7px;
+      padding: 10px;
+      margin-top: 7px;
+      font-size: 18px;
+      transition: 0.3s;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: #ccc;
+      }
+      &.correct {
+        border-left-color: hsl(249, 99%, 64%);
+        border-top-color: hsl(249, 99%, 64%);
+        border-right-color: hsl(278, 94%, 30%);
+        border-bottom-color: hsl(278, 94%, 30%);
+      }
+      &.wrong {
+        border-color: hsl(0, 100%, 66%);
+      }
+    }
+    .error {
+      font-size: 12px;
+      color: hsl(0, 100%, 66%);
+    }
+  }
+}
