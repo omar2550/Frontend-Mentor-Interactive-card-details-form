@@ -8,7 +8,7 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
-  overflow: hidden; 
+  overflow-x: hidden; 
 }
 /* Start Global Rules */
 h1,
