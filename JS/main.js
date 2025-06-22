@@ -216,7 +216,7 @@ function validateInputs() {
   }
 
   if (mmValue === "") {
-    setError(mm, "Can`t Blank");
+    setError(mm, "Can`t be blank");
   } else if ( !(parseInt(mmValue) > 0 && parseInt(mmValue) < 13) ) {
     setError(mm, "Invalid Month");
   } else {
@@ -225,7 +225,7 @@ function validateInputs() {
   }
   
   if (yyValue === "") {
-    setError(yy, "Can`t Blank");
+    setError(yy, "Can`t be blank");
   } else if ( !(parseInt(yyValue) >= 1990 && parseInt(yyValue) <= new Date().getFullYear())) {
     setError(yy, "Invalid Year");
   } else {
@@ -234,7 +234,7 @@ function validateInputs() {
   }
 
   if (cvcValue === "") {
-    setError(cvc, "Can`t Blank");
+    setError(cvc, "Can`t be blank");
   } else if (!/^\d+$/g.test(cvcValue)) {
     setError(cvc, "CVC Should be Numbers");
   } else if (cvcValue.length !== 3) {
